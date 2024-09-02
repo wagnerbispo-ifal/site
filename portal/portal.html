@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WB STUDY</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+        .sidebar-left, .sidebar-right {
+            flex: 1;
+            padding: 20px;
+            background-color: #ddd;
+            border-radius: 8px;
+            margin: 10px;
+        }
+        .main-content {
+            flex: 3;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            margin: 10px;
+        }
+        h1 {
+            margin-top: 0;
+        }
+        .sidebar-left a, .sidebar-right a {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            color: #333;
+        }
+        .sidebar-left a:hover, .sidebar-right a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar-left">
+            <h2>Menu</h2>
+            <a href="#materias">Matérias</a>
+            <a href="#exercicios">Exercícios</a>
+            <a href="#noticias">Notícias</a>
+            <a href="#sobre">Sobre</a>
+        </div>
+        <div class="main-content">
+            <h1>Bem-vindo ao WB STUDY</h1>
+            <p>Aqui você encontrará recursos para seus estudos e preparação para concursos.</p>
+            <section id="materias">
+                <h2>Matérias</h2>
+                <p>Conteúdo relacionado a várias matérias e tópicos importantes.</p>
+            </section>
+            <section id="exercicios">
+                <h2>Exercícios</h2>
+                <p>Exercícios para praticar e melhorar suas habilidades.</p>
+            </section>
+            <section id="noticias">
+                <h2>Notícias</h2>
+                <p>Últimas notícias e atualizações sobre concursos e estudos.</p>
+            </section>
+            <section id="sobre">
+                <h2>Sobre</h2>
+                <p>Informações sobre o WB STUDY e nossa missão.</p>
+            </section>
+        </div>
+        <div class="sidebar-right">
+            <h2>Informações Adicionais</h2>
+            <p>Seções extras ou informações úteis podem ser incluídas aqui.</p>
+            <a href="#">Link Extra 1</a>
+            <a href="#">Link Extra 2</a>
+        </div>
+    </div>
+</body>
+</html>

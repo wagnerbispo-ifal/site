@@ -1,0 +1,174 @@
+/* Variáveis */
+:root {
+    --main-bg-color: #03a9f4;
+    --button-bg-color: #03a9f4;
+    --button-hover-color: #0288d1;
+    --text-color: #333;
+    --input-border-color: #ddd;
+}
+
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    background: #2c5596;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 1rem; /* 16px por padrão */
+}
+
+.container {
+    background: white;
+    width: 50rem; /* Aproximadamente 800px */
+    height: 31.25rem; /* Aproximadamente 500px */
+    display: flex;
+    border-radius: 0.625rem; /* 10px */
+    box-shadow: 0 0 0.9375rem rgba(0, 0, 0, 0.2); /* 15px */
+}
+
+.left-side {
+    flex: 1;
+    background: var(--main-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.625rem 0 0 0.625rem; /* 10px */
+}
+
+.left-side img {
+    width: 70%;
+    animation: swing 7s ease-in-out infinite;
+}
+@media (max-width: 768px) {
+    .left-side img{
+        width: 20%;
+    }
+}
+.right-side {
+    flex: 1;
+    padding: 1.875rem; /* 30px */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-side h2 {
+    margin-bottom: 1.25rem; /* 20px */
+    color: var(--text-color);
+}
+
+.input-box {
+    margin-bottom: 0.9375rem; /* 15px */
+}
+
+.input-box input {
+    width: 94%;
+    padding: 0.625rem; /* 10px */
+    border: 0.0625rem solid var(--input-border-color); /* 1px */
+    border-radius: 0.3125rem; /* 5px */
+    font-size: 1rem;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.25rem; /* 20px */
+}
+
+.remember-me input {
+    margin-right: 0.3125rem; /* 5px */
+}
+
+button {
+    width: 100%;
+    padding: 0.625rem; /* 10px */
+    border: none;
+    background: var(--button-bg-color);
+    color: white;
+    border-radius: 0.3125rem; /* 5px */
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background: var(--button-hover-color);
+}
+
+.forgot {
+    display: block;
+    text-align: right;
+    margin-top: 0.625rem; /* 10px */
+    color: var(--text-color);
+}
+
+.forgot:hover {
+    text-decoration: underline;
+}
+
+p {
+    margin-top: 1.25rem; /* 20px */
+    color: #555;
+}
+
+p a {
+    color: var(--main-bg-color);
+}
+
+.social-login {
+    margin-top: 1.875rem; /* 30px */
+    text-align: center;
+}
+
+.social-login p {
+    margin-bottom: 0.625rem; /* 10px */
+    color: #555;
+}
+
+.social-login .icons a {
+    margin: 0 0.625rem; /* 10px */
+}
+
+.social-login .icons img {
+    width: 1.875rem; /* 30px */
+    height: 1.875rem; /* 30px */
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Tornar a largura mais adaptável em telas menores */
+        height: auto;
+        flex-direction: column;
+        border-radius: 0.625rem; /* 10px */
+    }
+
+    .left-side {
+        border-radius: 0.625rem 0.625rem 0 0; /* 10px */
+    }
+
+    .right-side {
+        padding: 1.25rem; /* 20px */
+    }
+}
+
+@media (max-width: 480px) {
+    .input-box input,
+    button {
+        font-size: 0.875rem; /* Diminuir o tamanho da fonte em telas muito pequenas */
+        padding: 0.5rem; /* Ajustar o padding */
+    }
+
+    .social-login .icons img {
+        width: 1.5rem; /* 24px */
+        height: 1.5rem; /* 24px */
+    }
+}
+@keyframes swing {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
