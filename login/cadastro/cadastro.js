@@ -14,7 +14,6 @@ function register() {
     } else {
         alert('Por favor, preencha todos os campos.');
     }
-    console.log(users); 
     // Armazena o usuário em uma variável (ou localStorage, se preferir)
     localStorage.setItem('users', JSON.stringify(users));
     // Redireciona para a página de sucesso
