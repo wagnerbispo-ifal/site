@@ -1,9 +1,6 @@
 // Variável para armazenar usuários
 let users = [];
 
-// Função de cadastro
-let registeredUsers = [];
-
 function register() {
     const email = document.getElementById('email').value;
     const name = document.getElementById('name').value;
@@ -11,16 +8,15 @@ function register() {
 
     if (email && name && password) {
         const user = { email, name, password };
-        
-        // Adiciona o novo usuário à variável global registeredUsers
-        registeredUsers.push(user);
-        
+        users.push(user);
         alert('Usuário cadastrado com sucesso!');
-        console.log(registeredUsers); // Exibe os usuários cadastrados no console
-
-        // Redireciona para a página de login
-        window.location.href = "../login.html";
+        console.log(users); // Para verificar os usuários cadastrados
     } else {
         alert('Por favor, preencha todos os campos.');
     }
+    console.log(users); 
+    // Armazena o usuário em uma variável (ou localStorage, se preferir)
+    localStorage.setItem('users', JSON.stringify(users));
+    // Redireciona para a página de sucesso
+    window.location.href = "../login.html";
 }

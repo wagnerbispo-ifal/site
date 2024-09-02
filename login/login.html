@@ -13,17 +13,39 @@
         </div>
         <div class="right-side">
             <h2>LOGIN</h2>
-            <form action="#">
+            <form onsubmit="return login()">
                 <div class="input-box">
-                    <input type="text" placeholder="Usuário" required>
+                    <input type="email" id="email" placeholder="Usuário" required>
                 </div>
                 <div class="input-box">
-                    <input type="password" placeholder="Senha" required>
+                    <input type="password" id ="password" placeholder="Senha" required>
                 </div>
                 <button type="submit">Entrar</button>
                 <p>Não Tem Uma Conta? <a href="../login/cadastro/cadastro.html">Inscrever-se</a></p>
             </form>
         </div>
     </div>
+    <script>
+        function login() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Recupera os usuários do localStorage
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+
+            // Verifica se existe um usuário com o email e senha fornecidos
+            const user = users.find(user => user.email === email && user.password === password);
+
+            if (user) {
+                alert('Login realizado com sucesso!');
+                // Redireciona para a página inicial ou dashboard
+                window.location.href = "../portal/portal.html";
+                return false;
+            } else {
+                alert('Usuário ou senha incorretos.');
+                return false; // Previne o envio do formulário
+            }
+        }
+    </script>
 </body>
 </html>
