@@ -14,7 +14,7 @@ body {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
-    
+
 }
 
 header {
@@ -23,6 +23,11 @@ header {
     padding: 10px 0;
 }
 
+header img {
+    max-width: 100px;
+    /* Define um tamanho máximo para a imagem */
+    height: auto;
+}
 header h1 {
     text-align: center;
 }
@@ -81,7 +86,8 @@ form label {
     margin: 10px 0 5px;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     padding: 10px;
     margin-bottom: 10px;
 }
@@ -107,21 +113,26 @@ footer {
 
 .button-container {
     display: flex;
-    justify-content: flex-end; /* Alinha o botão à direita */
-    margin-bottom: 1.25rem; /* Espaçamento inferior, opcional */
+    justify-content: flex-end;
+    /* Alinha o botão à direita */
+    margin-bottom: 1.25rem;
+    /* Espaçamento inferior, opcional */
 }
 
 button {
-    padding: 0.625rem; /* 10px */
+    padding: 0.625rem;
+    /* 10px */
     border: none;
     background: var(--button-bg-color);
     color: white;
-    border-radius: 0.3125rem; /* 5px */
+    border-radius: 0.3125rem;
+    /* 5px */
     cursor: pointer;
     font-size: 1rem;
     /* Remova ou ajuste a largura para evitar que o botão ocupe 100% */
     width: auto;
-    min-width: 8rem; /* Largura mínima opcional */
+    min-width: 8rem;
+    /* Largura mínima opcional */
 }
 
 button:hover {
